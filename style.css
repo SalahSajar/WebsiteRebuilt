@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*                       global Styles                          */
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    width:100vw;
+    background-color: rgb(29, 29, 47);
+    overflow-x: hidden;
+}
+
+h1 , h2, h3 , h4 , a , span{ color:#fff; }
+
+p{ color:#bbb; line-height: 1.6;}
+
+.section_Header{
+    font-size:3.5rem;
+}
+
+.container{
+    padding:0 50px;
+    width:100%;
+}
+
+.img_Container{
+    filter:grayscale(1)
+}
+.Content_Btn{
+    font-family: 'Roboto Mono', monospace;
+    font-size:1.05rem;
+    font-weight:700;
+    padding:17px 27px;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*                  Disactivated Responsive Block                 */
+
+
+header#responsiveHeader{
+    width:100%;
+    text-align: center;
+    display:none;
+    
+}
+
+    header#responsiveHeader p{
+        max-width:90%;
+        margin:0 auto;
+        padding:35px 0;
+    }
+    header#responsiveHeader .jobs_container{
+        margin:0 auto;
+        display:grid;
+        width:70%;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-gap: 70px;
+        text-align: left;
+    }
+
+section#firstSection_MobilMode{
+    display:none;
+    overflow: hidden;
+    border-radius:30px;
+    margin:60px 0;
+    width:100%;
+    background:url('Project_Imgs/Office_Img/pexels-startup-stock-photos-7070.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+    section#firstSection_MobilMode .firstSection_Content_Wrapper{
+        background:rgba(0,0,0,.8);
+        width:100%;
+        padding:100px 0;
+    }
+    section#firstSection_MobilMode .firstSection_Content{
+        text-align:center;
+    }
+        section#firstSection_MobilMode .firstSection_Content p{
+            max-width:80%;
+            margin:0 auto;
+            padding:25px 0;
+        }
+
+section#secondSection_MobilMode{
+    width:100%;
+    display:none;
+}
+
+    section#secondSection_MobilMode h2{
+        text-align:center;
+    }
+
+    section#secondSection_MobilMode .options_Wrapper{
+        width:100%;
+        display:grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap:50px;
+    }
+        section#secondSection_MobilMode .options_Wrapper .img_Container{
+            height:250px;
+        }
+        section#secondSection_MobilMode .option_Block{
+            margin:25px 0;
+        }
+        section#secondSection_MobilMode .option_Block:nth-child(1) .img_Container{
+            background:url('Project_Imgs/Office_Img/pexels-tranmautritam-225502.jpg');
+            background-size:cover;
+            background-position:center;
+        }
+        section#secondSection_MobilMode .option_Block:nth-child(2) .img_Container{
+            background:url('Project_Imgs/Office_Img/pexels-fauxels-3184589.jpg');
+            background-size:cover;
+            background-position:center;
+        }
+        section#secondSection_MobilMode .option_Block:nth-child(3) .img_Container{
+            background:url('Project_Imgs/Office_Img/pexels-startup-stock-photos-7070.jpg');
+            background-size:cover;
+            background-position:center;
+        }
+        section#secondSection_MobilMode .option_Block:nth-child(4) .img_Container{
+            background:url('Project_Imgs/Office_Img/pexels-marc-mueller-380769.jpg');
+            background-size:cover;
+            background-position:center;
+        }
+
+/*                         Special Styles                         */
+
+    header{
+        width:100%;
+    }
+        header nav {
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            width:100%;
+            padding:15px 0;
+        }
+
+            header nav ul{
+                display:flex;
+                align-items: center;
+                list-style: none;
+            }
+                header nav ul li{
+                    padding:0 25px;
+                }
+                    header nav ul li a{
+                        text-decoration:none;
+                        color:#fff;
+                        font-size:1.1rem;
+                    }
+        header .header_Content{
+            width:100%;
+            margin:30px 0;
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:65px;
+        }
+            header .header_Content .header_rb{
+                padding-left:50px;
+            }
+            header .header_Content .header_rb,
+            header .header_Content .header_lb{
+                width:100%;
+                position:relative;
+            }
+            header .header_Content .header_lb::before{
+                content:'';
+                position:absolute;
+                top:-20px;
+                left:-20px;
+                width:50px;
+                height:50px;
+                border-radius: 50%;
+                background-color: rgba(255,255,255 , .12);
+
+                box-shadow: 0 0 90px  rgb(255,255,255);
+            }
+                header .header_Content .header_lb p{
+                    padding:50px 0;
+                    max-width:85%;
+                }
+                header .jobs_container{
+                    display:grid;
+                    width:100%;
+                    grid-template-columns: repeat(3 ,1fr);
+                    grid-gap: 70px;
+                    /* align-items: center; */
+                    /* justify-content: space-between; */
+                }
+                    header .jobs_container .job_option{
+                        padding:45px 0 15px 15px;
+                        background-color:rgba(255,255,255 , .07);
+                        border-radius: 10px;
+                    }
+                        header .jobs_container .job_option span{
+                            padding-top:5px;
+                            display:block;
+                            font-weight:300;
+                        }
+            header .header_Content .header_rb .img_Container{
+                width:100%;
+                height:320px;
+                background:url('Project_Imgs/Office_Img/pexels-cadeau-maestro-1170412.jpg');
+                background-position:center;
+                background-repeat:no-repeat;
+            }
+            header .header_Content .header_rb p{
+                padding:40px 0;
+            }
+
+
+/*                         First Section                         */
+
+    section#firstSection{
+        margin:90px 0;
+        width:100%;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+    }
+
+    section#firstSection .img_Container{
+        width:100%;
+    }
+
+    section#firstSection .fs_lb,
+    section#firstSection .fs_rb{
+        width:50%;
+        position:relative;
+    }
+
+    section#firstSection .fs_lb{
+        padding-right:85px;
+    }
+
+        section#firstSection .fs_lb .img_Container{
+            background:url('Project_Imgs/Office_Img/pexels-startup-stock-photos-7070.jpg');
+            background-position: center;
+            background-repeat:no-repeat;
+            min-height: 450px;
+        }
+
+        section#firstSection .fs_lb p{
+            padding-top:25px;
+        }
+        section#firstSection .fs_rb .img_Container{
+            background:url('Project_Imgs/Office_Img/pexels-proxyclick-visitor-management-system-2451616.jpg');
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover;
+            min-height: 350px;
+            margin-top:15px;
+        }
+        section#firstSection .fs_rb button{
+            position:absolute;
+            bottom:20px;
+            right:40px;
+        }
+
+    /*                    second Section                    */
+
+    section#secondSection{
+        width:100%;
+        margin:20px 0 55px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:100px;
+    }
+
+        section#secondSection .option_Block{
+            margin:25px 0;
+        }
+
+        section#secondSection .ss_rb .img_Container{
+            width:100%;
+            height:500px;
+        }
+            section#secondSection .ss_rb .option_Block:nth-child(1) .img_Container{
+                background:url('Project_Imgs/Office_Img/pexels-tranmautritam-225502.jpg');
+                background-size:cover;
+                background-position:center;
+            }
+            section#secondSection .ss_rb .option_Block:nth-child(2) .img_Container{
+                background:url('Project_Imgs/Office_Img/pexels-fauxels-3184589.jpg');
+                background-size:cover;
+                background-position:center;
+            }
+
+        section#secondSection .ss_lb .img_Container{
+            width:100%;
+            height:400px;
+        }
+
+            section .option_Block{
+                margin:50px 0;
+            }
+
+                section#secondSection .ss_lb .option_Block:nth-child(1) .img_Container{
+                    background:url('Project_Imgs/Office_Img/pexels-startup-stock-photos-7070.jpg');
+                    background-size:cover;
+                    background-position:center;
+                }
+                section#secondSection .ss_lb .option_Block:nth-child(2) .img_Container{
+                    background:url('Project_Imgs/Office_Img/pexels-marc-mueller-380769.jpg');
+                    background-size:cover;
+                    background-position:center;
+                }
+
+                section .option_Header{
+                    padding:15px 45px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color:rgba(255,255,255,.08);
+                    border-radius: 10px 10px 0 0;
+                }
+                    section .option_Header span{
+                        font-size:1.5rem;
+                        font-weight:700;
+                    }
+
+    /*                    third Section                    */
+
+    section#thirdSection{
+        width:100%;
+    }
+        section#thirdSection .section_Typos{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 20px;
+        }
+            section#thirdSection .section_Typos p{
+                max-width:50%;
+            }
+            section#thirdSection .section_Typos h2{
+                font-size:2.5rem;
+                text-align: right;
+            }
+        section#thirdSection .team_Wrapper{
+            width:100%;
+            margin:25px 0;
+            display:flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+            section#thirdSection .team_Wrapper .teamGuy{
+                width:20%;
+            }
+                section#thirdSection .team_Wrapper .teamGuy .img_Container{
+                    width:100%;
+                    height: 350px;
+                    margin-top:50px;
+                }
+                section#thirdSection .team_Wrapper .teamGuy:nth-child(1) .img_Container{
+                    background:url('Project_Imgs/Team_Img/pexels-martin-péchy-594610.jpg');
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                section#thirdSection .team_Wrapper .teamGuy:nth-child(2) .img_Container{
+                    background:url('Project_Imgs/Team_Img/pexels-wallace-chuck-2659177.jpg');
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                section#thirdSection .team_Wrapper .teamGuy:nth-child(3) .img_Container{
+                    background:url('Project_Imgs/Team_Img/pexels-pixabay-157675.jpg');
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+            section#thirdSection .team_Wrapper .teamGuy h4{
+                padding:10px 0;
+                font-size:1.5rem;
+            }
+            section#thirdSection .team_Wrapper .teamGuy p{
+                line-height: 0;
+            }
+
+
+/*                          footer                          */
+
+footer{
+    border-radius: 90px 90px 0 0;
+    text-align: center;
+    margin-top:50px;
+    padding:20px 0;
+    background-color:rgba(0,0,0,.5);
+}
+
+    footer h1{
+        color:#eee;
+        letter-spacing: 2px;
+    }
+    footer span{
+        color:#999;
+    }
+
+
+/*                     responsive Styles                     */
+
+@media screen and (max-width: 1250px){
+
+    header .header_Content .header_lb .jobs_container{
+        grid-gap: 20px;
+    }
+        header .header_Content .header_lb .jobs_container .job_option{
+            padding:45px 0 15px 15px;
+            background-color:rgba(255,255,255 , .07);
+            border-radius: 10px;
+        }
+
+    section#secondSection .ss_lb h2{
+        font-size:3.1rem;
+    }
+}
+
+@media screen and (max-width: 1100px){
+
+    section#secondSection .ss_lb h2{
+        font-size:2.9rem;
+    }
+
+    section#thirdSection .team_Wrapper .teamGuy{
+        width:25%;
+    }
+
+    section#firstSection .fs_rb button{
+        position:absolute;
+        bottom:50px;
+        right:40px;
+    }
+    
+}
+
+@media screen and (max-width: 1050px){
+    header .header_Content{
+            grid-gap:25px;
+        }
+
+    section#secondSection{
+        grid-gap:50px;
+    }
+
+    section#thirdSection .section_Typos p{
+        max-width:65%;
+    }
+
+    section#firstSection .fs_lb{
+        padding-right:45px;
+    }
+    
+}
+
+@media screen and (max-width: 970px){
+    header#responsiveHeader{
+        display:block;
+    }
+    header#Main_Header{
+        display:none;
+    }
+}
+@media screen and (max-width: 850px){
+    header#responsiveHeader nav ul li{
+        padding:0 15px;
+    }
+        header#responsiveHeader nav ul li a{
+            text-decoration:none;
+            color:#fff;
+            font-size:1rem;
+        }
+
+    header#responsiveHeader .jobs_container{
+        width:70%;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-gap: 30px;
+        text-align: left;
+    }
+
+    section#firstSection_MobilMode{
+        display:block;
+    }
+    section#firstSection{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 770px){
+    section#secondSection_MobilMode{
+        display:block;
+    }
+    section#secondSection{
+        display:none;
+    }
+
+    header#responsiveHeader .jobs_container{
+        width:80%;
+    }
+
+        section#thirdSection .section_Typos{
+            flex-direction: column-reverse;
+            padding:0;
+        }
+            section#thirdSection .section_Typos p{
+                max-width:85%;
+                margin:0 auto;
+                text-align: center;
+                padding-top:15px;
+            }
+            section#thirdSection .section_Typos h2{
+                text-align: center;
+
+            }
+        section#thirdSection .team_Wrapper{
+            margin:15px 0;
+            justify-content: space-between;
+        }
+            section#thirdSection .team_Wrapper .teamGuy{
+                width:30%;
+            }
+                section#thirdSection .team_Wrapper .teamGuy .img_Container{
+                    width:100%;
+                    height: 300px;
+                    margin-top:25px;
+                }
+            section#thirdSection .team_Wrapper .teamGuy h4{
+                padding:10px 0;
+                font-size:1.1rem;
+            }
+            section#thirdSection .team_Wrapper .teamGuy p{
+                font-size:.8rem;
+            }
+}
+
+@media screen and (max-width:650px){
+    header#responsiveHeader .jobs_container{
+        width:100%;
+        grid-gap: 10px;
+    }
+    header#responsiveHeader p{
+        max-width:100%;
+    }
+}
+
+@media screen and (max-width:510px){
+    .section_Header{
+        font-size:2.5rem;
+    }
+    section#secondSection_MobilMode .options_Wrapper{
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap:10px;
+    }
+        section#secondSection_MobilMode .options_Wrapper .img_Container{
+            height:150px;
+        }
+        section#secondSection_MobilMode .option_Block{
+            margin:10px 0;
+        }
+        section#firstSection_MobilMode .firstSection_Content p{
+            max-width:95%;
+        }
+}
+
+@media screen and (max-width:600px){
+    header#responsiveHeader nav ul li{
+        padding:0 10px;
+    }
+        header#responsiveHeader nav ul li a{
+            text-decoration:none;
+            color:#fff;
+            font-size:.9rem;
+        }
+
+    section#secondSection_MobilMode .options_Wrapper .img_Container{
+        height:120px;
+    }
+    section#secondSection_MobilMode .option_Block{
+        margin:5px 0;
+    }
+}
